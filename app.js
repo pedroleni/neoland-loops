@@ -101,6 +101,47 @@ for (key in alien){
     console.log( key+": "+alien[key]);
 }
 
+/*------------------------------------------------------------------------
+ ----------------**Iteración #5: Probando For-----------------------------
+ -----------------------------------------------------------------------*/
+
+ /*Usa un bucle **for** para recorrer todos los destinos del array 
+ y elimina los elementos que tengan el id 11 y 40. Imprime en un **_console log_** el array.
+  Puedes usar este array:*/
+
+
+const placesToTravel2 = [
+  { id: 5, name: "Japan" },
+  { id: 11, name: "Venecia" },
+  { id: 23, name: "Murcia" },
+  { id: 40, name: "Santander" },
+  { id: 44, name: "Filipinas" },
+  { id: 59, name: "Madagascar" },
+];
+
+//creamos un array que cumpla la condicion de los id diferente de 11 y 40
+let newPlacesToTravel2 = [];
+//recorremos el array 
+for ( let places of placesToTravel2 ){
+    //recorremos los objetos dentro del array 
+    for ( let key in  places){  
+        //cuando el key sea un id -- compruebame las condiciones de id =11 o id=40
+        if (key=="id"){
+            if (!((places[key]==11) || (places[key]==40))){
+                newPlacesToTravel2.push(places);   
+            }
+        }  
+    }
+}
+console.log(newPlacesToTravel2);
+
+
+
+
+
+
+
+
 
 
 
